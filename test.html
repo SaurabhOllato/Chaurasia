@@ -3,243 +3,176 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Growtech - Web Developer</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <title>Lettering Animation</title>
   <style>
     body {
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Inter', sans-serif;
+      background: #F7F6FB;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      margin: 0;
     }
-    .clip-triangle {
-      clip-path: polygon(0 0, 100% 0, 0 100%);
+    
+    .hero {
+      max-width: 800px;
+      padding: 2rem;
     }
-    .circle {
-  height: 24px;
-  width: 24px;
-  border-radius: 24px;
-  background-color: black;
-  position: fixed; 
-  top: 0;
-  left: 0;
-  pointer-events: none;
-  z-index: 99999999; /* so that it stays on top of all other elements */
-}
+    
+    h1 {
+      font-size: 3rem;
+      font-weight: bold;
+      color: #d1d5db;
+      margin-bottom: 0.5rem;
+      text-align: left;
+    }
+    
+    h2 {
+      font-size: 4rem;
+      font-weight: bold;
+      color: #000;
+      position: relative;
+      margin-bottom: 1rem;
+      text-align: left;
+    }
+    
+    .char {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    
+    #underline {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 3px;
+      background: #7c3aed;
+      width: 0;
+    }
+    
+    .special-l {
+      color: #7c3aed;
+      position: relative;
+    }
+    
+    p {
+      color: #6b7280;
+      font-size: 1.25rem;
+      margin-top: 1rem;
+      text-align: left;
+    }
+    
+    button {
+      background: #7c3aed;
+      color: white;
+      border: none;
+      padding: 0.75rem 2rem;
+      border-radius: 9999px;
+      font-weight: 600;
+      margin-top: 2rem;
+      cursor: pointer;
+      transition: transform 0.2s;
+    }
+    
+    button:hover {
+      background: #6d28d9;
+      transform: scale(1.05);
+    }
   </style>
 </head>
-<body class="bg-white text-gray-800">
-    <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-  <div class="circle"></div>
-
-  <!-- Navbar -->
-  <nav class="flex justify-between items-center px-10 py-6">
-    <div class="text-2xl font-bold text-black">
-      Grow<span class="text-purple-600">t</span><span class="text-gray-600">e</span><span class="text-purple-600">ch.</span>
-    </div>
-    <ul class="hidden md:flex gap-6 text-sm text-gray-600">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">About</a></li>
-      <li><a href="#">Services</a></li>
-      <li><a href="#">Portfolio</a></li>
-      <li><a href="#">Testimonial</a></li>
-      <li><a href="#">Expertise</a></li>
-      <li><a href="#">Blog</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-    <button class="bg-purple-600 hover:bg-purple-700 text-white px-5 py-2 rounded-full shadow-md">
-      DOWNLOAD CV
-    </button>
-  </nav>
-
-  <!-- Main Section -->
-  <section class="flex flex-col lg:flex-row h-[calc(100vh-80px)]">
-    <!-- Left -->
-    <div class="relative w-full lg:w-1/2 bg-black flex justify-center items-center overflow-hidden">
-      <div class="clip-triangle absolute w-full h-full bg-purple-600 opacity-80 z-10"></div>
-      <img src="https://i.ibb.co/S5gNcRC/person.png" alt="Person" class="z-20 max-h-[80%] object-cover grayscale" />
-    </div>
-
-    <!-- Right -->
-    <div class="w-full lg:w-1/2 flex flex-col justify-center px-10 py-10">
-      <h1 class="text-4xl lg:text-6xl font-light text-gray-300">I'm a</h1>
-      <h2 class="text-4xl lg:text-6xl font-bold text-black">Web Dev<span class="text-purple-600">l</span>oper</h2>
-      <p class="mt-4 text-gray-500">100% Html5 Bootstrap5 Templates Made By Growtech.</p>
-      <div class="mt-6 flex gap-4">
-        <button class="border px-5 py-2 rounded-full hover:bg-gray-100">GET STARTED</button>
-        <button class="bg-purple-600 hover:bg-purple-700 text-white px-5 py-2 rounded-full shadow-md">VIEW PORTFOLIO</button>
-      </div>
-    </div>
-  </section>
-
-  <!-- Color Picker -->
-  <div class="absolute top-36 right-10 bg-white shadow-md rounded-xl p-4">
-    <h3 class="text-sm font-semibold mb-2 text-gray-700">CHOOSE A COLOR</h3>
-    <div class="flex gap-2">
-      <div class="w-5 h-5 rounded-full bg-green-600 cursor-pointer"></div>
-      <div class="w-5 h-5 rounded-full bg-pink-600 cursor-pointer"></div>
-      <div class="w-5 h-5 rounded-full bg-blue-600 cursor-pointer"></div>
-      <div class="w-5 h-5 rounded-full bg-yellow-500 cursor-pointer"></div>
-      <div class="w-5 h-5 rounded-full bg-red-500 cursor-pointer"></div>
-    </div>
+<body>
+  <div class="hero">
+    <h1>I'm a</h1>
+    <h2>
+      Web <span id="animated-text"></span>
+      <span id="underline"></span>
+    </h2>
+    <p>Passionate about clean code & great design</p>
+    <button>VIEW PORTFOLIO</button>
   </div>
 
-  <!-- Footer Socials -->
-  <footer class="absolute bottom-6 right-10 text-sm text-gray-500">
-    FOLLOW ME ON :
-    <span class="text-purple-600 ml-2">f</span>
-    <span class="text-purple-600 ml-2">t</span>
-    <span class="text-purple-600 ml-2">in</span>
-  </footer>
-<section class="flex flex-col lg:flex-row h-auto lg:h-screen">
-  <!-- Sticky Image (Left Side on Desktop) -->
-  <div class="lg:w-1/2 w-full h-[400px] lg:h-auto sticky top-0 overflow-hidden">
-    <img
-      src="data:image/jpeg;base64,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"
-      alt="Sticky"
-      class="w-full h-full object-cover"
-    />
-  </div>
+  <!-- GSAP Core + SplitText (free) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/TextPlugin.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/SplitText.min.js"></script>
 
-  <!-- Scrollable Content -->
-  <div class="lg:w-1/2 w-full px-6 py-12 space-y-16">
-    <div class="space-y-2">
-      <h2 class="text-3xl font-bold">My Story</h2>
-      <p class="text-gray-600">
-        I started with HTML and CSS, and now I'm exploring full-stack development with React and Node.js.
-      </p>
-    </div>
-
-    <div class="space-y-2">
-      <h2 class="text-3xl font-bold">My Skills</h2>
-      <p class="text-gray-600">
-        From responsive layouts to API integration — I build modern web apps that are fast, clean, and scalable.
-      </p>
-    </div>
-
-    <div class="space-y-2">
-      <h2 class="text-3xl font-bold">My Mission</h2>
-      <p class="text-gray-600">
-        I strive to create digital experiences that are visually engaging and functionally powerful.
-      </p>
-    </div>
-  </div>
-</section>
-
-
-
-    <section id="home" class="relative h-dvh flex overflow-hidden">
-  <!-- Left Side -->
-  <div class="w-1/2 bg-black relative z-10 flex items-center justify-center">
-    <div id="particles-js" class="absolute inset-0 z-0"></div>
-  </div>
-
-  <!-- Right Side -->
-  <div class="w-1/2 bg-[#f9f9f9] flex items-center z-10">
-    <div class="text-left p-10">
-      <h1 class="text-4xl lg:text-6xl font-light text-gray-400">I'm a</h1>
-      <h2 class="text-4xl lg:text-6xl font-bold text-black">
-        Web Dev<span class="text-purple-600">l</span>oper
-      </h2>
-      <p class="mt-4 text-gray-500">
-        100% Html5 Bootstrap5 Templates Made By Growtech.
-      </p>
-      <div class="mt-6 flex gap-4">
-        <button class="border px-5 py-2 rounded-full hover:bg-gray-100">
-          GET STARTED
-        </button>
-        <button class="bg-purple-600 hover:bg-purple-700 text-white px-5 py-2 rounded-full shadow-md">
-          VIEW PORTFOLIO
-        </button>
-      </div>
-    </div>
-  </div>
-
-  <!-- Triangle Image Overlap -->
-  <div class="absolute inset-0 flex items-center justify-center pointer-events-none">
-    <div class="triangle-wrapper">
-      <img src="your-image.jpg" alt="Profile" class="triangle-img" />
-    </div>
-  </div>
-</section>
-
-
-
-
-<script>
-    const coords = { x: 0, y: 0 };
-const circles = document.querySelectorAll(".circle");
-
-const colors = [
-  "#ffffff", // optional bright flicker
-  "#f2f2f2",
-  "#e6e6e6",
-  "#cccccc",
-  "#b3b3b3",
-  "#999999",
-  "#7f7f7f",
-  "#666666",
-  "#4d4d4d",
-  "#333333",
-  "#1a1a1a",
-  "#0d0d0d",
-  "#000000",
-  "#000000",
-  "#000000"
-];
-
-
-circles.forEach(function (circle, index) {
-  circle.x = 0;
-  circle.y = 0;
-  circle.style.backgroundColor = colors[index % colors.length];
-});
-
-window.addEventListener("mousemove", function(e){
-  coords.x = e.clientX;
-  coords.y = e.clientY;
-  
-});
-
-function animateCircles() {
-  
-  let x = coords.x;
-  let y = coords.y;
-  
-  circles.forEach(function (circle, index) {
-    circle.style.left = x - 12 + "px";
-    circle.style.top = y - 12 + "px";
-    
-    circle.style.scale = (circles.length - index) / circles.length;
-    
-    circle.x = x;
-    circle.y = y;
-
-    const nextCircle = circles[index + 1] || circles[0];
-    x += (nextCircle.x - x) * 0.3;
-    y += (nextCircle.y - y) * 0.3;
-  });
- 
-  requestAnimationFrame(animateCircles);
-}
-
-animateCircles();
-</script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const text = "Developer";
+      const animatedText = document.getElementById('animated-text');
+      
+      // Split the text into letters and wrap each in a span
+      const letters = text.split('').map((letter, index) => {
+        const span = document.createElement('span');
+        span.className = 'char';
+        span.textContent = letter;
+        
+        // Add special class to the 'l' character
+        if (index === 3) { // 'l' is the 4th letter in "Developer"
+          span.classList.add('special-l');
+        }
+        
+        return span;
+      });
+      
+      // Add all letters to the DOM
+      letters.forEach(letter => animatedText.appendChild(letter));
+      
+      // Animate each letter with a stagger
+      gsap.to('.char', {
+        y: 0,
+        opacity: 1,
+        duration: 0.6,
+        ease: 'back.out(1.7)',
+        stagger: 0.1,
+        delay: 0.3
+      });
+      
+      // Special animation for the 'l'
+      gsap.to('.special-l', {
+        y: -15,
+        duration: 0.8,
+        repeat: -1,
+        yoyo: true,
+        ease: 'sine.inOut',
+        delay: 1.5
+      });
+      
+      // Underline animation
+      gsap.to('#underline', {
+        width: '100%',
+        duration: 1.2,
+        ease: 'power2.out',
+        delay: 1.0
+      });
+      
+      // Hover effects
+      animatedText.addEventListener('mouseenter', () => {
+        gsap.to('.char', {
+          color: '#7c3aed',
+          duration: 0.3,
+          stagger: 0.05
+        });
+        gsap.to('.special-l', {
+          scale: 1.3,
+          duration: 0.3
+        });
+      });
+      
+      animatedText.addEventListener('mouseleave', () => {
+        gsap.to('.char', {
+          color: '#000',
+          duration: 0.3,
+          stagger: 0.05
+        });
+        gsap.to('.special-l', {
+          scale: 1,
+          duration: 0.3
+        });
+      });
+    });
+  </script>
 </body>
 </html>

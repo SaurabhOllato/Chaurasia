@@ -85,12 +85,14 @@ html {
   clip-path: polygon(20% 0%, 100% 50%, 20% 100%);
 }
 
+
 .circle {
   height: 24px;
   width: 24px;
   border-radius: 24px;
   background-color: black;
   position: fixed; 
+   /* pointer-events: none; */
   top: 0;
   left: 0;
   pointer-events: none;
@@ -138,7 +140,7 @@ html {
   }
 
 
-.cursor-follower {
+/* .cursor-follower {
   position: fixed;
   width: 20px;
   height: 20px;
@@ -151,6 +153,20 @@ html {
   will-change: transform;
   backface-visibility: hidden;
 }
+
+ .scroll-indicator {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 14px;
+    opacity: 0.7;
+  }
+  .prevent-scroll {
+    overflow: hidden;
+    height: 100vh;
+  } */
 
 /* Animation fixes */
 .gradient-bg {
@@ -188,4 +204,39 @@ html {
     transform: rotate(180deg);
   }
 
-  
+  #contact {
+  position: relative;
+  overflow: hidden;
+}
+
+#contact::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 50%, rgba(0,0,0,0.9) 100%);
+  z-index: 1;
+}
+
+#contact > * {
+  position: relative;
+  z-index: 2;
+}
+
+.contact-left {
+  backdrop-filter: blur(2px);
+}
+
+.contact-form {
+  backdrop-filter: blur(2px);
+  padding: 2rem;
+  border-radius: 0.5rem;
+  background: rgba(15, 15, 15, 0.5);
+  border: 1px solid rgba(63, 206, 78, 0.2);
+}
+
+.form-input:focus {
+  box-shadow: 0 2px 0 0 rgba(63, 206, 78, 0.5);
+}

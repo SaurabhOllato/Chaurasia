@@ -37,7 +37,7 @@
   <div class="circle"></div>
 
   <!-- Header -->
-  <header class="w-full top-0 z-50 flex flex-col sm:flex-row h-auto sm:h-20">
+  <header class="w-full top-0 z-50 flex flex-col bg-[#F7F6FB] sm:flex-row h-auto sm:h-20">
     <!-- Left Column -->
     <div class="w-full sm:w-1/3 bg-black text-white flex items-center justify-center sm:justify-end px-6 py-3 sm:py-0">
       <h1 class="text-xl font-bold">Portfolio.</h1>
@@ -65,14 +65,14 @@
         </ul>
       </nav>
       <button
-        class="disable-cursor-effect opacity-100 bg-purple-600 text-white px-4 py-2 rounded-full hover:bg-purple-700 transition mt-2 sm:mt-0">
+        class="disable-cursor-effect download-cv opacity-100 bg-purple-600 text-white px-4 py-2 rounded-full hover:bg-purple-700 transition mt-2 sm:mt-0">
         Download CV
       </button>
     </div>
   </header>
 
   <!-- Hero Section with Parallax -->
-  <section id="home" class="h-[600px] flex">
+  <section id="home" class="min-h-screen bg-[#F7F6FB] flex">
     <!-- Left Side with Particles -->
     <div class="w-1/3 bg-black relative overflow-hidden">
       <!-- Particles container -->
@@ -87,7 +87,7 @@
     </div>
 
     <!-- Right Side -->
-    <div class="w-3/5 flex items-center bg-[#F7F6FB] justify-center">
+    <div class="w-3/5 flex items-center  justify-center">
       <div class="text p-10 w-full text-center">
         <!-- Headline Part 1 -->
         <div class="flex justify-center">
@@ -105,10 +105,10 @@
               Web Dev<span class="developer-text text-purple-600">e</span>loper
             </h2>
             <!-- Centered underline -->
-            <!-- <div class="absolute bottom-0 left-1/2  transform -translate-x-1/2 h-1.5 w-full overflow-hidden">
+            <div class="absolute -bottom-2 left-1/2  transform -translate-x-1/2 h-1.5 w-full overflow-hidden">
               <span id="underline"
                 class="absolute bottom-0 left-0  h-full w-0 bg-gradient-to-r from-purple-500 to-indigo-600 rounded-full"></span>
-            </div> -->
+            </div>
           </div>
         </div>
 
@@ -149,7 +149,7 @@
   </section>
 
   <!-- About -->
-  <section id="about" class="relative max-w-5xl mx-auto h-screen  py-16 px-4 flex justify-center items-center">
+  <section id="about" class="relative max-w-5xl transition-all duration-700 ease-in-out mx-auto min-h-screen  py-16 px-4 flex justify-center items-center">
     <div class="flex flex-col md:flex-row gap-12 justify-center items-start">
       <!-- Left: Intro -->
       <div class="md:w-1/2 space-y-6">
@@ -192,7 +192,10 @@
   </section>
 
   <!-- skills -->
-  <section id="skills" class="max-w-5xl mx-auto py-16 bg-white px-4 h-screen">
+  <section id="skills" class="relative max-w-5xl mx-auto py-16 bg-white px-4 h-screen">
+         <div id="particles-contact" class="absolute inset-0 z-0"></div>
+
+    
     <div class="relative">
       <h1
         class="text-2xl sm:text-3xl font-semibold mb-10 border-b-2 border-indigo-500 pb-2 text-center mx-auto w-[500px]">
@@ -382,10 +385,9 @@
   </section>
 
   <!-- contact -->
-  <section class="bg-black text-white py-24 lg:py-28 px-8 h-fit md:px-20 px-6" id="contact">
-    
-     <div id="particles-contact" class="absolute inset-0 z-0"></div>
-    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12">
+  <section class="relative text-white py-24 lg:py-28 px-8 h-fit md:px-20 px-6" id="contact">
+    <!-- Vanta.js container will be added via JavaScript -->
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 relative z-10">
         <!-- Left Side: Text & Info -->
         <div class="contact-left">
             <h2 class="text-4xl md:text-5xl font-bold mb-6 contact-heading">
@@ -400,15 +402,15 @@
 
             <ul class="space-y-4 text-gray-300 contact-info">
                 <li class="flex items-center gap-3 contact-item">
-                    <span>📞</span>
+                    <span class="text-xl">📞</span>
                     <span>7666449601</span>
                 </li>
                 <li class="flex items-center gap-3 contact-item">
-                    <span>✉️</span>
+                    <span class="text-xl">✉️</span>
                     <span>itsxoaman@gamil.com</span>
                 </li>
                 <li class="flex items-center gap-3 contact-item">
-                    <span>📍</span>
+                    <span class="text-xl">📍</span>
                     <span>LALBAUG,MUMBAI</span>
                 </li>
             </ul>
@@ -417,12 +419,12 @@
         <!-- Right Side: Contact Form -->
         <form class="space-y-6 contact-form" id="contact-form">
             <input type="text" name="name" placeholder="Full Name" required
-                class="w-full bg-transparent border-b border-gray-400 py-2 focus:outline-none text-white placeholder-gray-400 form-input" />
+                class="w-full bg-transparent border-b border-gray-400 py-2 focus:outline-none text-white placeholder-gray-400 form-input focus:border-green-400 transition-colors" />
             <input type="email" name="email" placeholder="Email Address" required
-                class="w-full bg-transparent border-b border-gray-400 py-2 focus:outline-none text-white placeholder-gray-400 form-input" />
+                class="w-full bg-transparent border-b border-gray-400 py-2 focus:outline-none text-white placeholder-gray-400 form-input focus:border-green-400 transition-colors" />
             <textarea name="message" rows="4" placeholder="Message" required
-                class="w-full bg-transparent border-b border-gray-400 py-2 focus:outline-none text-white placeholder-gray-400 resize-none form-input"></textarea>
-            <button type="submit" class="bg-green-400 text-black px-6 py-2 mt-2 rounded hover:bg-green-500 transition form-button">
+                class="w-full bg-transparent border-b border-gray-400 py-2 focus:outline-none text-white placeholder-gray-400 resize-none form-input focus:border-green-400 transition-colors"></textarea>
+            <button type="submit" class="bg-green-400 text-black px-6 py-3 mt-2 rounded-lg hover:bg-green-500 transition-all transform hover:scale-105 form-button font-medium">
                 Submit
             </button>
             <p id="form-status" class="text-lime-300 mt-2 hidden">

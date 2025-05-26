@@ -815,88 +815,88 @@ setTimeout(() => {
 
 // Contact section animations using GSAP and ScrollTrigger
 // Register ScrollTrigger plugin
-gsap.registerPlugin(ScrollTrigger);
+// gsap.registerPlugin(ScrollTrigger);
 
 // Animation for the left side
-gsap.from(".contact-heading", {
-  scrollTrigger: {
-    trigger: "#contact",
-    start: "top 80%",
-    toggleActions: "play none none none"
-  },
-  y: 50,
-  opacity: 0,
-  duration: 0.8,
-  ease: "power3.out"
-});
+// gsap.from(".contact-heading", {
+//   scrollTrigger: {
+//     trigger: "#contact",
+//     start: "top 80%",
+//     toggleActions: "play none none none"
+//   },
+//   y: 50,
+//   opacity: 0,
+//   duration: 0.8,
+//   ease: "power3.out"
+// });
 
-gsap.from(".contact-text", {
-  scrollTrigger: {
-    trigger: "#contact",
-    start: "top 70%",
-    toggleActions: "play none none none"
-  },
-  y: 30,
-  opacity: 0,
-  duration: 0.8,
-  delay: 0.2,
-  ease: "power3.out"
-});
+// gsap.from(".contact-text", {
+//   scrollTrigger: {
+//     trigger: "#contact",
+//     start: "top 70%",
+//     toggleActions: "play none none none"
+//   },
+//   y: 30,
+//   opacity: 0,
+//   duration: 0.8,
+//   delay: 0.2,
+//   ease: "power3.out"
+// });
 
-gsap.from(".contact-item", {
-  scrollTrigger: {
-    trigger: "#contact",
-    start: "top 60%",
-    toggleActions: "play none none none"
-  },
-  x: -20,
-  opacity: 0,
-  duration: 0.5,
-  stagger: 0.15,
-  delay: 0.4,
-  ease: "power3.out"
-});
+// gsap.from(".contact-item", {
+//   scrollTrigger: {
+//     trigger: "#contact",
+//     start: "top 60%",
+//     toggleActions: "play none none none"
+//   },
+//   x: -20,
+//   opacity: 0,
+//   duration: 0.5,
+//   stagger: 0.15,
+//   delay: 0.4,
+//   ease: "power3.out"
+// });
 
-// Animation for the form
-gsap.from(".contact-form", {
-  scrollTrigger: {
-    trigger: "#contact",
-    start: "top 70%",
-    toggleActions: "play none none none"
-  },
-  y: 50,
-  opacity: 0,
-  duration: 0.8,
-  delay: 0.3,
-  ease: "power3.out"
-});
+// // Animation for the form
+// gsap.from(".contact-form", {
+//   scrollTrigger: {
+//     trigger: "#contact",
+//     start: "top 70%",
+//     toggleActions: "play none none none"
+//   },
+//   y: 50,
+//   opacity: 0,
+//   duration: 0.8,
+//   delay: 0.3,
+//   ease: "power3.out"
+// });
 
-gsap.from(".form-input", {
-  scrollTrigger: {
-    trigger: "#contact",
-    start: "top 60%",
-    toggleActions: "play none none none"
-  },
-  y: 20,
-  opacity: 0,
-  duration: 0.5,
-  stagger: 0.1,
-  delay: 0.5,
-  ease: "power3.out"
-});
+// gsap.from(".form-input", {
+//   scrollTrigger: {
+//     trigger: "#contact",
+//     start: "top 60%",
+//     toggleActions: "play none none none"
+//   },
+//   y: 20,
+//   opacity: 0,
+//   duration: 0.5,
+//   stagger: 0.1,
+//   delay: 0.5,
+//   ease: "power3.out"
+// });
 
-gsap.from(".form-button", {
-  scrollTrigger: {
-    trigger: "#contact",
-    start: "top 50%",
-    toggleActions: "play none none none"
-  },
-  scale: 0.8,
-  opacity: 0,
-  duration: 0.6,
-  delay: 0.8,
-  ease: "elastic.out(1, 0.5)"
-});
+// gsap.from(".form-button", {
+//   scrollTrigger: {
+//     trigger: "#contact",
+//     start: "top 50%",
+//     toggleActions: "play none none none"
+//   },
+//   scale: 0.8,
+//   opacity: 0,
+//   duration: 0.6,
+//   delay: 0.8,
+//   ease: "elastic.out(1, 0.5)"
+// });
 
 // end of contact section animations
 
@@ -1271,3 +1271,4 @@ document.addEventListener('DOMContentLoaded', function() {
     });
   }
 });
+

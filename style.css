@@ -1,5 +1,16 @@
 body {
 /* background-color: #F7F6FB; */
+/* background-color: rgb(29, 29, 31); */
+/* background: linear-gradient(to bottom, 
+  rgb(15, 14, 16), 
+  rgb(13, 13, 15), 
+  rgb(18, 19, 20), 
+  rgb(28, 29, 31), 
+  rgb(70, 73, 76), 
+  rgb(39, 41, 43)
+); */
+
+
 }
 #home , header , #projects{
   background-color: #F7F6FB;
@@ -239,4 +250,56 @@ html {
 
 .form-input:focus {
   box-shadow: 0 2px 0 0 rgba(63, 206, 78, 0.5);
+}
+  .animate-fadeInUp {
+    animation: fadeInUp 0.6s ease-out forwards;
+    opacity: 0;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .portfolio-item {
+    opacity: 0; /* Start hidden for animation */
+    transform: translateY(20px);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+  }
+  
+  #projects .text-center {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: transform 0.6s ease, opacity 0.6s ease;
+  }
+  
+  #projects .text-center.animate-fadeInUp {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  #particles-top-right, #particles-bottom-left {
+    transition: transform 0.3s ease-out;
+  }
+  
+  /* Add a subtle scale effect on hover for all items */
+  .portfolio-item:hover {
+    transform: scale(1.02) !important;
+    z-index: 10;
+  }
+
+  #particles-top-right, #particles-bottom-left {
+  pointer-events: none; /* Allows clicks to pass through when not interactive */
+}
+
+@media (max-width: 768px) {
+  .circle {
+    display: none;
+  }
 }

@@ -12,6 +12,10 @@ body {
 
 
 }
+
+.custom-clip {
+  clip-path: ellipse(140% 100% at 50% 30%);
+}
 #home , header , #projects{
   background-color: #F7F6FB;
 

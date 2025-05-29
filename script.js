@@ -660,7 +660,26 @@ $(document).ready(function () {
   const uiIntro = gsap.timeline();
 
   // Animate header elements with staggered effect
-  uiIntro.from("header h1, header nav ", {
+  // uiIntro.from("header h1, header nav ", {
+  //   opacity: 0,
+  //   y: -30,
+  //   duration: 0.8,
+  //   stagger: 0.1,
+  //   ease: "back.out(1.5)",
+  // });
+
+  // uiIntro.fromTo(
+  //   ".download-cv",
+  //   { opacity: 0, y: -30 },
+  //   { opacity: 1, y: 0, duration: 0.8, ease: "back.out(1.5)" }
+  // );
+
+  function isLargeScreen() {
+  return window.innerWidth >= 1024; // Tailwind lg breakpoint
+}
+
+if (isLargeScreen()) {
+  uiIntro.from("header h1, header nav", {
     opacity: 0,
     y: -30,
     duration: 0.8,
@@ -673,10 +692,12 @@ $(document).ready(function () {
     { opacity: 0, y: -30 },
     { opacity: 1, y: 0, duration: 0.8, ease: "back.out(1.5)" }
   );
+}
+
 
   // Enhanced triangle animation
   uiIntro.from(
-    ".triangle-purple",
+    ".triangle-png",
     {
       opacity: 0,
       x: -100,

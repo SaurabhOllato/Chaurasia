@@ -677,9 +677,9 @@ $(document).ready(function () {
   function isLargeScreen() {
   return window.innerWidth >= 1024; // Tailwind lg breakpoint
 }
-
+// mobile view home page
 if (isLargeScreen()) {
-  uiIntro.from("header h1, header nav", {
+  uiIntro.from("header img, header nav", {
     opacity: 0,
     y: -30,
     duration: 0.8,
@@ -694,6 +694,42 @@ if (isLargeScreen()) {
   );
 }
 
+if ($("#text-line-1-mobile").length) {
+    $("#text-line-1-mobile").lettering();
+    $("#text-line-2-mobile").lettering();
+    $("#text-line-3-mobile").lettering();
+
+    const mobileIntro = gsap.timeline();
+    mobileIntro.from("#text-line-1-mobile span", {
+      opacity: 0,
+      x: -30,
+      rotation: -5,
+      stagger: { amount: 0.5, from: "random" },
+      duration: 1.2,
+      ease: "back.out(1.2)",
+    });
+
+    mobileIntro.from("#text-line-2-mobile span", {
+      opacity: 0,
+      y: 40,
+      scale: 0.5,
+      rotation: 10,
+      transformOrigin: "50% 0%",
+      stagger: { each: 0.08, from: "center" },
+      duration: 1,
+      ease: "elastic.out(1, 0.5)",
+    }, "-=0.8");
+
+    mobileIntro.from("#text-line-3-mobile span", {
+      opacity: 0,
+      y: 20,
+      filter: "blur(5px)",
+      stagger: { each: 0.03, from: "random" },
+      duration: 1,
+      ease: "power2.out",
+    }, "-=0.8");
+  }
+// end of mobile
 
   // Enhanced triangle animation
   uiIntro.from(

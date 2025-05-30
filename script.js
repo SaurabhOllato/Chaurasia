@@ -247,6 +247,7 @@ window.onload = function () {
   // Initialize particles for the home section with a different configuration
 
   particlesJS("particles-home", {
+
     particles: {
       number: {
         value: 120, // Reduced for better performance
@@ -728,6 +729,54 @@ if ($("#text-line-1-mobile").length) {
       duration: 1,
       ease: "power2.out",
     }, "-=0.8");
+
+    uiIntro.from(
+    ".triangle-mobile",
+    {
+      opacity: 0,
+      x: -100,
+      rotation: -15,
+      duration: 1.5,
+      ease: "expo.out",
+    },
+    "-=1"
+  );
+
+  uiIntro.from(
+    ".triangle-black-mobile",
+    {
+      opacity: 0,
+      x: -80,
+      rotation: -10,
+      duration: 1.2,
+      ease: "expo.out",
+    },
+    "-=1"
+  );
+
+  uiIntro.from(
+    ".scroll",
+    {
+      opacity: 0,
+      x: -80,
+      rotation: -10,
+      duration: 1.2,
+      ease: "expo.out",
+    },
+    "-=1"
+  );
+
+  uiIntro.from(
+    ".image",
+    {
+      opacity: 0,
+      x: -80,
+      rotation: -10,
+      duration: 1.2,
+      ease: "expo.out",
+    },
+    "-=1"
+  );
   }
 // end of mobile
 
@@ -1562,3 +1611,20 @@ document.getElementById('mobile-menu-button').addEventListener('click', function
     navContent.classList.toggle('hidden');
     navContent.classList.toggle('flex');
   });
+
+
+   function resizeMasonryItems() {
+    const grid = document.querySelector('.masonry-grid');
+    const rowHeight = parseInt(getComputedStyle(grid).getPropertyValue('grid-auto-rows'));
+    const gap = parseInt(getComputedStyle(grid).getPropertyValue('gap'));
+    const items = grid.children;
+
+    Array.from(items).forEach(item => {
+      const contentHeight = item.getBoundingClientRect().height;
+      const rowSpan = Math.ceil((contentHeight + gap) / (rowHeight + gap));
+      item.style.setProperty('--row-span', rowSpan);
+    });
+  }
+
+  window.addEventListener('load', resizeMasonryItems);
+  window.addEventListener('resize', resizeMasonryItems);

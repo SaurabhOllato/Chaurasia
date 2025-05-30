@@ -264,3 +264,250 @@ ggsugi
 
 
   </section>
+
+  
+  particlesJS("particles-home", {
+    particles: {
+      number: {
+        value: 120, // Reduced for better performance
+        density: {
+          enable: true,
+          value_area: 800, // Better particle distribution
+        },
+      },
+      color: {
+        value: ["#ffffff", "#9c27b0", "#673ab7"], // Multiple colors
+      },
+      shape: {
+        type: ["circle", "triangle", "polygon"], // Mixed shapes
+        stroke: {
+          width: 0,
+          color: "#000000",
+        },
+         character: {
+    value: ["</html>", "CSS", "JavaScript", "React", "Node.js"],
+    font: "Verdana",
+    weight: "bold",
+    style: "",
+    fill: true
+  },
+        polygon: {
+          nb_sides: 5,
+        },
+      },
+      opacity: {
+        value: 0.5,
+        random: true, // Random opacity for depth
+        anim: {
+          enable: true,
+          speed: 1,
+          opacity_min: 0.1,
+          sync: false,
+        },
+      },
+      size: {
+        value: 3,
+        random: true, // Random sizes
+        anim: {
+          enable: true,
+          speed: 2,
+          size_min: 0.1,
+          sync: false,
+        },
+      },
+      move: {
+        enable: true,
+        speed: 1.5, // Slower, more elegant movement
+        direction: "none",
+        random: true,
+        straight: false,
+        out_mode: "out", // Particles fade out at edges
+        bounce: false,
+        attract: {
+          enable: true,
+          rotateX: 600,
+          rotateY: 1200,
+        },
+      },
+      line_linked: {
+        enable: true,
+        distance: 120, // Increased connection distance
+        color: "#9c27b0", // Purple connections
+        opacity: 0.2,
+        width: 1,
+        shadow: {
+          enable: true,
+          color: "#9c27b0",
+          blur: 5,
+        },
+      },
+    },
+    interactivity: {
+      detect_on: "canvas",
+      events: {
+        onhover: {
+          enable: true,
+          mode: "bubble", // More interactive mode
+        },
+        onclick: {
+          enable: true,
+          mode: "push", // Particles push away on click
+        },
+        resize: true,
+      },
+      modes: {
+        bubble: {
+          distance: 100,
+          size: 8,
+          duration: 2,
+          opacity: 0.8,
+          speed: 3,
+        },
+        push: {
+          particles_nb: 4,
+        },
+        grab: {
+          distance: 140,
+          line_linked: {
+            opacity: 0.8,
+          },
+        },
+      },
+    },
+    retina_detect: true,
+    config_demo: {
+      hide_card: true,
+    },
+  });
+
+
+  <!-- skills -->
+   <section id="skills" class="relative max-w-6xl mx-auto py-16 bg-white px-4 min-h-screen">
+  <div id="particles-contact" class="absolute inset-0 z-0"></div>
+  
+  <div class="relative z-10">
+    <h1 class="text-2xl sm:text-3xl font-semibold mb-10 border-b-2 border-indigo-500 pb-2 text-center mx-auto w-fit">
+      MY SKILLS
+    </h1>
+
+    <!-- Three Column Grid Layout -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 mt-12">
+      <!-- Left Column - Frontend -->
+      <div class="frontend-skills bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-md">
+        <h2 class="text-xl font-semibold text-center mb-6 text-indigo-600">
+          Frontend
+        </h2>
+        <div class="grid grid-cols-3 gap-4 sm:gap-6 justify-items-center">
+          <div class="skill-item flex flex-col items-center">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg" 
+                 alt="HTML" class="w-12 h-12 hover:scale-110 transition-transform" />
+            <span class="text-xs mt-2">HTML5</span>
+          </div>
+          <div class="skill-item flex flex-col items-center">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg" 
+                 alt="CSS" class="w-12 h-12 hover:scale-110 transition-transform" />
+            <span class="text-xs mt-2">CSS3</span>
+          </div>
+          <div class="skill-item flex flex-col items-center">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" 
+                 alt="JavaScript" class="w-12 h-12 hover:scale-110 transition-transform" />
+            <span class="text-xs mt-2">JavaScript</span>
+          </div>
+          <div class="skill-item flex flex-col items-center">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original-wordmark.svg" 
+                 alt="React" class="w-12 h-12 hover:scale-110 transition-transform" />
+            <span class="text-xs mt-2">React</span>
+          </div>
+          <div class="skill-item flex flex-col items-center">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" 
+                 alt="Tailwind" class="w-12 h-12 hover:scale-110 transition-transform" />
+            <span class="text-xs mt-2">Tailwind</span>
+          </div>
+          <div class="skill-item flex flex-col items-center">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nextjs/nextjs-original-wordmark.svg" 
+                 alt="Next.js" class="w-12 h-12 hover:scale-110 transition-transform dark:invert" />
+            <span class="text-xs mt-2">Next.js</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Center Column - Tools -->
+      <div class="tools-skills bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-md order-first md:order-none">
+        <h2 class="text-xl font-semibold text-center mb-6 text-indigo-600">
+          Tools
+        </h2>
+        <div class="grid grid-cols-2 gap-4 sm:gap-6 justify-items-center">
+          <div class="skill-item flex flex-col items-center">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/git/git-original.svg" 
+                 alt="Git" class="w-12 h-12 hover:scale-110 transition-transform" />
+            <span class="text-xs mt-2">Git</span>
+          </div>
+          <div class="skill-item flex flex-col items-center">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/github/github-original-wordmark.svg" 
+                 alt="GitHub" class="w-12 h-12 hover:scale-110 transition-transform" />
+            <span class="text-xs mt-2">GitHub</span>
+          </div>
+          <div class="skill-item flex flex-col items-center">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" 
+                 alt="Figma" class="w-12 h-12 hover:scale-110 transition-transform" />
+            <span class="text-xs mt-2">Figma</span>
+          </div>
+          <div class="skill-item flex flex-col items-center">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postman/postman-original.svg" 
+                 alt="Postman" class="w-12 h-12 hover:scale-110 transition-transform" />
+            <span class="text-xs mt-2">Postman</span>
+          </div>
+          <div class="skill-item flex flex-col items-center">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vscode/vscode-original-wordmark.svg" 
+                 alt="VSCode" class="w-12 h-12 hover:scale-110 transition-transform" />
+            <span class="text-xs mt-2">VSCode</span>
+          </div>
+          <div class="skill-item flex flex-col items-center">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/vercel/vercel-original-wordmark.svg" 
+                 alt="Vercel" class="w-12 h-12 hover:scale-110 transition-transform dark:invert" />
+            <span class="text-xs mt-2">Vercel</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column - Backend -->
+      <div class="backend-skills bg-white/80 backdrop-blur-sm p-6 rounded-xl shadow-md">
+        <h2 class="text-xl font-semibold text-center mb-6 text-indigo-600">
+          Backend
+        </h2>
+        <div class="grid grid-cols-3 gap-4 sm:gap-6 justify-items-center">
+          <div class="skill-item flex flex-col items-center">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg" 
+                 alt="Node.js" class="w-12 h-12 hover:scale-110 transition-transform" />
+            <span class="text-xs mt-2">Node.js</span>
+          </div>
+          <div class="skill-item flex flex-col items-center">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg" 
+                 alt="Express" class="w-12 h-12 hover:scale-110 transition-transform" />
+            <span class="text-xs mt-2">Express</span>
+          </div>
+          <div class="skill-item flex flex-col items-center">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original-wordmark.svg" 
+                 alt="MongoDB" class="w-12 h-12 hover:scale-110 transition-transform" />
+            <span class="text-xs mt-2">MongoDB</span>
+          </div>
+          <div class="skill-item flex flex-col items-center">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg" 
+                 alt="MySQL" class="w-12 h-12 hover:scale-110 transition-transform" />
+            <span class="text-xs mt-2">MySQL</span>
+          </div>
+          <div class="skill-item flex flex-col items-center">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-plain-wordmark.svg" 
+                 alt="PostgreSQL" class="w-12 h-12 hover:scale-110 transition-transform" />
+            <span class="text-xs mt-2">PostgreSQL</span>
+          </div>
+          <div class="skill-item flex flex-col items-center">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-plain-wordmark.svg" 
+                 alt="Firebase" class="w-12 h-12 hover:scale-110 transition-transform" />
+            <span class="text-xs mt-2">Firebase</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

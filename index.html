@@ -41,17 +41,33 @@
     <!-- Left Column -->
     <div class="w-full sm:w-1/3 bg-black text-white flex items-center justify-between px-6 py-3 sm:py-0 sm:justify-end">
       <!-- <h1 class="text-xl font-bold sm:mr-auto sm:ml-6">Portfolio.</h1> -->
-      <img src="assets/LOGO.png" class="w-20 h-20" />
+      <img src="assets/LOGO.png" class="lg:w-20 lg:h-20 w-10 h-10 image" />
 
-      <button class="sm:hidden text-white focus:outline-none" id="mobile-menu-button">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-        </svg>
-      </button>
+      <!-- <button
+          class="sm:hidden text-white focus:outline-none"
+          id="mobile-menu-button"
+
+        >
+          <svg
+            class="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            ></path>
+          </svg>
+        </button> -->
     </div>
 
     <!-- Right Column -->
-    <div class="w-full sm:w-2/3 hidden lg:flex flex flex-col sm:flex-row items-center justify-between px-6 gap-4 py-3 sm:py-0"
+    <div
+      class="w-full sm:w-2/3 hidden lg:flex flex flex-col sm:flex-row items-center justify-between px-6 gap-4 py-3 sm:py-0"
       id="nav-content">
       <nav>
         <ul class="flex flex-wrap justify-center gap-4 sm:gap-6 font-medium text-gray-800">
@@ -154,28 +170,25 @@
         </div>
       </div>
     </div>
-
-
-
-
   </section>
 
   <!-- Hero Section for mobile -->
   <section
-    class="lg:hidden w-full max-w-md mx-auto bg-gradient-to-b from-black to-[#2a2a2a] relative text-white h-screen p-4 space-y-4">
+    class="lg:hidden w-full max-w-md mx-auto bg-gradient-to-b from-black to-[#2a2a2a] relative text-white min-h-screen  p-4 space-y-2">
     <!-- Simplified particles container (kept but not enhanced) -->
     <div id="particles-home" class="absolute inset-0 z-0"></div>
+    <div class="bg-overlay"></div>
 
     <!-- Image and Info -->
-    <!-- <div class="flex flex-col items-center text-center space-y-2 pt-8">
-      <div class="relative w-24 h-24 overflow-hidden rounded-b-[80%]">
-        <img src="assets/polygon3.svg" alt="Profile" class="w-full h-full object-cover" />
+    <div class="flex flex-col items-center text-center space-y-2 pt-6 sm:pt-8">
+      <div class="relative w-60 h-60 sm:w-24 sm:h-24 overflow-hidden rounded-b-[80%]">
+        <img src="assets/polygon3.svg" alt="Profile" class="w-full h-full object-cover triangle-mobile" />
       </div>
-    </div> -->
+    </div>
 
     <!-- Content Section -->
     <div class="flex items-center relative justify-center px-2">
-      <div class="text w-full text-center py-60">
+      <div class="text w-full text-center ">
         <!-- Headline Part 1 -->
         <div class="flex justify-center px-4 sm:px-0">
           <h1 id="text-line-1-mobile"
@@ -185,12 +198,13 @@
         </div>
 
         <!-- Headline Part 2 -->
-        <div class="flex flex-col items-center">
+        <div class="flex flex-col items-center py-2">
           <div class="relative inline-block text-center">
             <h2 id="text-line-2-mobile"
-              class="text-3xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-gray-900 to-gray-700">
-              Web Dev<span class="text-purple-600">e</span>loper
+              class="text-4xl font-extrabold bg-clip-text text-transparent bg-gradient-to-r from-gray-300 to-white">
+              Web Dev<span class="text-white">e</span>loper
             </h2>
+
             <!-- Centered underline -->
             <div class="absolute -bottom-1 left-1/2 transform -translate-x-1/2 h-1 w-full overflow-hidden">
               <span id="underline"
@@ -200,7 +214,7 @@
         </div>
 
         <!-- Subheading -->
-        <div class="flex justify-center mt-4">
+        <div class="flex justify-center mt-4 py-2">
           <p id="text-line-3-mobile" class="text-gray-400 text-base font-medium leading-relaxed">
             Crafting digital experiences with
             <span class="text-purple-400 font-semibold">clean code</span> &
@@ -210,25 +224,18 @@
       </div>
     </div>
 
-    <!-- Optional Button (commented out) -->
-    <!-- <div class="mt-8 flex justify-center">
-    <button class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-2 rounded-full text-sm font-medium shadow">
-      VIEW WORK
-    </button>
-  </div> -->
   </section>
 
   <!-- About -->
   <section id="about"
-    class="relative max-w-5xl transition-all duration-700 ease-in-out mx-auto min-h-screen py-16 px-4 flex justify-center items-center">
+    class="relative max-w-5xl transition-all duration-700 ease-in-out mx-auto min-h-screen py-16 px-10 lg:px-4 flex justify-center items-center">
     <div class="flex flex-col md:flex-row gap-12 justify-center items-start">
       <!-- Left: Intro -->
       <div class="md:w-1/2 space-y-6">
         <h2 class="text-4xl font-bold">About Me</h2>
-        <p class="text-lg text-gray-700">
+        <p class="text-sm lg:text-lg text-gray-700">
           I'm Saurabh Chaurasia, a passionate frontend developer who enjoys
-          crafting clean and interactive user interfaces using HTML, CSS,
-          Tailwind, and JavaScript. I specialize in building modern web
+          crafting clean and interactive user interfaces. I specialize in building modern web
           experiences that are both functional and visually appealing. I also
           work with React to develop dynamic, component-based applications,
           and I'm currently expanding my skill set by learning backend
@@ -244,7 +251,7 @@
       </div>
 
       <!-- Right: Learning Path / Journey -->
-      <div class="md:w-1/2">
+      <div class="md:w-1/2 text-sm lg:text-lg space-y-4">
         <!-- <h3 class="text-2xl font-semibold mb-4">My Learning Path</h3> -->
         <ul class="border-l-4 border-purple-500 pl-6 space-y-6 text-gray-800">
           <li>
@@ -279,47 +286,76 @@
 
     <div class="relative">
       <h1
-        class="text-2xl sm:text-3xl font-semibold mb-10 border-b-2 border-indigo-500 pb-2 text-center mx-auto w-[500px]">
+        class="text-2xl sm:text-3xl font-semibold mb-10 border-b-2 border-indigo-500 pb-2 text-center mx-auto lg:w-[500px]">
         MY SKILLS
       </h1>
 
       <!-- Vertical lines to each side -->
       <div class="absolute w-[2px] h-[50px] bg-indigo-600 left-1/4 top-full mt-0"></div>
-      <div class="absolute w-[2px] h-[50px] bg-indigo-600 right-1/4 top-full mt-0"></div>
-      <div class="absolute w-[2px] h-[180px] bg-indigo-600 top-1/2 left-1/2 top-full mt-0"></div>
+      <div class="absolute w-[2px] h-[415px] bg-indigo-600 right-1/4 top-full mt-0"></div>
+      <div class="absolute w-[2px] h-[224px] bg-indigo-600 top-1/2 left-1/2 top-full mt-0"></div>
     </div>
 
     <!-- Columns -->
     <div class="grid md:grid-cols-2 gap-10 mt-16 w-full px-4">
       <!-- Left Skills -->
-      <div class="frontend-skills">
-        <h2 class="text-xl font-semibold text-center mb-4">
+      <div class="frontend-skills w-32">
+        <h2 class="text-sm lg:text-xl font-semibold text-left lg:text-center mb-4">
           Frontend Skills
         </h2>
-        <div class="flex flex-wrap justify-center gap-6">
+        <!-- <div class="flex flex-wrap justify-center gap-6">
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg"
+              alt="HTML"
+              class="w-6 h-6 cursor-pointer skill-icon"
+              title="HTML"
+            />
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg"
+              alt="CSS"
+              class="w-12 h-12 skill-icon"
+            />
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
+              alt="JavaScript"
+              class="w-12 h-12 skill-icon"
+            />
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original-wordmark.svg"
+              alt="React"
+              class="w-12 h-12 skill-icon"
+            />
+            <img
+              src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
+              alt="Tailwind CSS"
+              class="w-12 h-12 skill-icon"
+            />
+          </div> -->
+        <div class="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-6 justify-items-center ">
           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original-wordmark.svg"
-            alt="HTML" class="w-12 h-12 cursor-pointer skill-icon" title="HTML" />
+            alt="HTML" class="w-6 h-6 sm:w-12 sm:h-12 cursor-pointer skill-icon" title="HTML" />
           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original-wordmark.svg" alt="CSS"
-            class="w-12 h-12 skill-icon" />
+            class="w-10 h-10 sm:w-12 sm:h-12 skill-icon" />
           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
-            alt="JavaScript" class="w-12 h-12 skill-icon" />
+            alt="JavaScript" class="w-10 h-10 sm:w-12 sm:h-12 skill-icon" />
           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original-wordmark.svg"
-            alt="React" class="w-12 h-12 skill-icon" />
+            alt="React" class="w-10 h-10 sm:w-12 sm:h-12 skill-icon" />
           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
-            alt="Tailwind CSS" class="w-12 h-12 skill-icon" />
+            alt="Tailwind CSS" class="w-10 h-10 sm:w-12 sm:h-12 skill-icon" />
         </div>
+
       </div>
 
       <!-- Right Skills -->
-      <div class="backend-skills">
-        <h2 class="text-xl font-semibold text-right md:text-center mb-4">
+      <div class="backend-skills ">
+        <h2 class="text-sm lg:text-xl font-semibold text-center lg:text-center mb-4">
           Backend
         </h2>
-        <div class="flex flex-wrap justify-end md:justify-center gap-6">
+        <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-5 gap-6 justify-items-center w-72">
           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg"
-            alt="Node.js" class="w-12 h-12 skill-icon" />
+            alt="Node.js" class="w-6 h-6 skill-icon" />
           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/express/express-original.svg"
-            alt="Express" class="w-12 h-12 skill-icon" />
+            alt="Express" class="w-6 h-6 skill-icon" />
           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg"
             alt="MySQL" class="w-12 h-12 skill-icon" />
           <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/postgresql/postgresql-plain-wordmark.svg"
@@ -350,7 +386,7 @@
   </section>
 
   <!-- Portfolio -->
-  <section id="projects" class="min-h-screen bg-black py-16 relative">
+  <section id="projects" class="bg min-h-screen py-16 relative">
     <!-- Particles Background -->
     <div id="particles-top-right" class="absolute top-0 right-0 w-full md:w-[270px] h-[400px] opacity-60 z-0"></div>
     <div id="particles-bottom-left" class="absolute bottom-0 left-0 w-full md:w-[270px] h-[400px] z-0 opacity-60"></div>
@@ -402,7 +438,7 @@
       </div>
 
       <!-- Portfolio Grid -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="portfolioGrid">
+      <div class="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-6" id="portfolioGrid">
         <!-- Portfolio Item 1 -->
         <div
           class="portfolio-item group relative overflow-hidden rounded-lg bg-white shadow-md transition-all duration-300 hover:shadow-xl md:hover:scale-105 md:hover:col-span-2 lg:hover:col-span-2 col-span-1 transition-all duration-500 ease-in-out"
@@ -502,6 +538,68 @@
       </div>
     </div>
   </section>
+<section class="hexagon-gallery">
+  <h1>Hexagon Grid</h1>
+
+<div class="grid">
+  <div class="grid--item">
+    <div class="img" style="background-image: url(https://images.unsplash.com/photo-1417436026361-a033044d901f?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=faa4e192f33e0d6b7ce0e54f15140e42);"></div>
+    <div class="container">
+      <h2>Snowy Hills</h2>
+      <div class="desc">Photo by Ales Krivec</div>
+    </div>
+  </div>
+
+  <div class="grid--item">
+    <div class="img" style="background-image: url(https://images.unsplash.com/44/MIbCzcvxQdahamZSNQ26_12082014-IMG_3526.jpg?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=49dab7a5e4b2e28b5707bc2db974c94b);"></div>
+    <div class="container">
+      <h2>Bear</h2>
+      <div class="desc">Photo by Thomas Lefebvre</div>
+    </div>
+  </div>
+
+  <div class="grid--item">
+    <div class="img" style="background-image: url(https://images.unsplash.com/photo-1425668273332-3a46ab26b161?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&w=1080&fit=max&s=d453ab3dec298c43415526458b360fa6);"></div>
+    <div class="container">
+      <h2>Owl</h2>
+      <div class="desc">Photo by photostockeditor</div>
+    </div>
+  </div>
+
+  <div class="grid--item">
+    <div class="img" style="background-image: url(https://images.unsplash.com/photo-1423145369430-a9ea0de096cd?crop=entropy&fit=crop&fm=jpg&h=1375&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1725);"></div>
+    <div class="container">
+      <h2>Horse</h2>
+      <div class="desc">Photo by Annie Spratt</div>
+    </div>
+  </div>
+
+  <div class="grid--item">
+    <div class="img" style="background-image: url(https://images.unsplash.com/photo-1432887382605-0abf9cc49e8f?crop=entropy&fit=crop&fm=jpg&h=1375&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1725);"></div>
+    <div class="container">
+      <h2>Ice & Penguin</h2>
+      <div class="desc">Photo by Teodor Bjerrang</div>
+    </div>
+  </div>
+
+  <div class="grid--item">
+    <div class="img" style="background-image: url(https://images.unsplash.com/photo-1417026846249-f31f7e43fc35?crop=entropy&fit=crop&fm=jpg&h=1375&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1725);"></div>
+    <div class="container">
+      <h2>Pile of Logs</h2>
+      <div class="desc">Photo by Ales Krivec</div>
+    </div>
+  </div>
+
+  <div class="grid--item">
+    <div class="img" style="background-image: url(https://images.unsplash.com/uploads/14122811862445bc266cf/931448f2?crop=entropy&fit=crop&fm=jpg&h=1375&ixjsv=2.1.0&ixlib=rb-0.3.5&q=80&w=1725);"></div>
+    <div class="container">
+      <h2>Winter Tree</h2>
+      <div class="desc">Photo by Mikael Kristenson</div>
+    </div>
+  </div>
+</div>
+</section>
+
 
   <!-- contact -->
   <section class="relative text-white py-24 lg:py-28 px-8 h-fit md:px-20 px-6" id="contact">

@@ -108,6 +108,25 @@ skillTags.forEach((tag) => {
 
 // particlejs
 window.onload = function () {
+
+  gsap.registerPlugin(MotionPathPlugin, ScrollTrigger);
+
+gsap.to("#ball", {
+  scrollTrigger: {
+    trigger: "#wavePath",  
+    start: "top center",
+  end: "+=500",
+    scrub: true,
+  },
+  motionPath: {
+    path: "#wavePath",
+    align: "#wavePath",
+    autoRotate: true,
+    alignOrigin: [0.5, 0.5]
+  },
+  ease: "none"
+});
+
   // Enhanced Particles Configuration for portfolio section
   const enhancedParticlesConfig = {
     particles: {
@@ -1628,3 +1647,22 @@ document.getElementById('mobile-menu-button').addEventListener('click', function
 
   window.addEventListener('load', resizeMasonryItems);
   window.addEventListener('resize', resizeMasonryItems);
+
+
+   gsap.registerPlugin(MotionPathPlugin, ScrollTrigger);
+
+   gsap.to("#ball", {
+  scrollTrigger: {
+    trigger: "#wavePath",  // or another section you want to use as trigger
+    start: "top center",
+    end: "bottom top",
+    scrub: true,
+  },
+  motionPath: {
+    path: "#wavePath",
+    align: "#wavePath",
+    autoRotate: true,
+    alignOrigin: [0.5, 0.5]
+  },
+  ease: "none"
+});

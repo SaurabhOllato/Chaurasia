@@ -111,34 +111,49 @@ window.onload = function () {
 
   gsap.registerPlugin(MotionPathPlugin, ScrollTrigger);
 
-gsap.to("#ball", {
-  scrollTrigger: {
-    trigger: "#wavePath",  
-    start: "top center",
-  end: "+=500",
-    scrub: true,
-  },
-  motionPath: {
-    path: "#wavePath",
-    align: "#wavePath",
-    autoRotate: true,
-    alignOrigin: [0.5, 0.5]
-  },
-  ease: "none"
-});
+  // Step 1: Free fall from left to center on load
+  gsap.fromTo("#ball", 
+    { x: "-100%", y: 0 }, // Start off-screen on left
+    { 
+      x: "50vw", // Move to center horizontally
+      duration: 1.5,
+      ease: "power2.out",
+      onComplete: startScrollAnimation
+    }
+  );
+
+  function startScrollAnimation() {
+    // Step 2: Scroll-triggered animation along the path
+    gsap.to("#ball", {
+      scrollTrigger: {
+        trigger: "#wavePath",
+        start: "top center",
+        end: "+=500",
+        scrub: true,
+      },
+      motionPath: {
+        path: "#wavePath",
+        align: "#wavePath",
+        autoRotate: true,
+        alignOrigin: [0.5, 0.5]
+      },
+      ease: "none"
+    });
+  }
+
 
   // Enhanced Particles Configuration for portfolio section
   const enhancedParticlesConfig = {
     particles: {
       number: {
-        value: 180, // Reduced for better performance
+        value: 10, // Reduced for better performance
         density: {
           enable: true,
           value_area: 800, // Better particle distribution
         },
       },
       color: {
-        value:  ["#ffffff"],  // Purple gradient colors
+        value: ["#FFFFFF"], // Brighter grays for contrast
       },
       shape: {
         type: ["circle", "triangle"], // Mixed shapes
@@ -1649,20 +1664,3 @@ document.getElementById('mobile-menu-button').addEventListener('click', function
   window.addEventListener('resize', resizeMasonryItems);
 
 
-   gsap.registerPlugin(MotionPathPlugin, ScrollTrigger);
-
-   gsap.to("#ball", {
-  scrollTrigger: {
-    trigger: "#wavePath",  // or another section you want to use as trigger
-    start: "top center",
-    end: "bottom top",
-    scrub: true,
-  },
-  motionPath: {
-    path: "#wavePath",
-    align: "#wavePath",
-    autoRotate: true,
-    alignOrigin: [0.5, 0.5]
-  },
-  ease: "none"
-});
